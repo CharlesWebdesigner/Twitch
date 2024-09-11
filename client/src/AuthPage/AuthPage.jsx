@@ -1,5 +1,18 @@
-import React from "react";
-
+import React, { useState } from "react";
+import { Login, Register } from "./index";
+import "./authPage.css";
 export const AuthPage = () => {
-  return <div>This is AuthPage</div>;
+  const [isLogin, setIsLogin] = useState(true);
+  const handleAuthPageToggle = () => {
+    setIsLogin((prev) => !prev);
+  };
+  return (
+    <div className="auth-container">
+      {isLogin ? (
+        <Login switchAuthHandler={handleAuthPageToggle} />
+      ) : (
+        <Register switchAuthHandler={handleAuthPageToggle} />
+      )}
+    </div>
+  );
 };

@@ -4,7 +4,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { AuthPage } from "./AuthPage";
 import { DashboardPage } from "./DashboardPage";
 import { App } from "./App.jsx";
-import "./index.css";
 const router = createBrowserRouter([
   { path: "/auth", element: <AuthPage /> },
   { path: "/", element: <DashboardPage /> },
